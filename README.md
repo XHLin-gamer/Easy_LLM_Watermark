@@ -12,7 +12,7 @@
 <br />
 <div align="center">
     <a href="https://github.com/XHLin-gamer/Easy_LLM_Watermark">
-         <img src="pics/icon.png" alt="Logo" style="width:70%; max-width:80%; display:block; margin:auto;" />
+         <img src="pics/icon.png" alt="Logo" style="width:80%; max-width:100%; display:block; margin:auto;"  />
     </a>
 
 <h3 align="center">誰でも理解できる、大規模言語モデルのための電子透かし</h3>
