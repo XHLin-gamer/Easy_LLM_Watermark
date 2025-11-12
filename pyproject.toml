@@ -1,0 +1,11 @@
+[project]
+name = "easy-llm-watermark"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "ipykernel>=7.1.0",
+    "loguru>=0.7.3",
+    "tokenizers>=0.22.1",
+]
