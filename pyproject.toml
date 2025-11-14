@@ -5,6 +5,7 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
+    "accelerate>=1.11.0",
     "ipykernel>=7.1.0",
     "ipywidgets>=8.1.8",
     "loguru>=0.7.3",
@@ -12,4 +13,5 @@ dependencies = [
     "opencv-python>=4.11.0.86",
     "requests>=2.32.5",
     "tokenizers>=0.22.1",
+    "transformers>=4.57.1",
 ]
