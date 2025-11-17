@@ -34,15 +34,15 @@
 ## あらすじ
 
 1. [前書き](src/1.preface.md)
-2. [なぜLLMの文書を追跡する技術が必要とされるか？](2.Motivation.md)
-3. [LLM は次の単語（トークン）を予測する技術です](3.Proposition.md)
-   1. [パソコンの単語：トークン](3.Proposition.md#パソコンの単語トークン)
-   2. [大規模言語モデル](3.Proposition.md#大規模言語モデル)
-      1. [次の単語へ](3.Proposition.md#次の単語へ)
-      2. [大規模言語モデルを観察しよう](3.Proposition.md#大規模言語モデルを観察しよう)
-      3. [LLMの内部に何が起こっているか](3.Proposition.md#llmの内部に何が起こっているか)
-      4. [多岐にわたるサンプリング手法](3.Proposition.md#多岐にわたるサンプリング手法)
-      5. [LLMの機能を拡張せよ](3.Proposition.md#llmの機能を拡張せよ)
+2. [なぜLLMの文書を追跡する技術が必要とされるか？](src/2.Motivation.md)
+3. [LLM は次の単語（トークン）を予測する技術です](src/3.Proposition.md)
+   1. [パソコンの単語：トークン](src/3.Proposition.md#パソコンの単語トークン)
+   2. [大規模言語モデル](src/3.Proposition.md#大規模言語モデル)
+      1. [次の単語へ](src/3.Proposition.md#次の単語へ)
+      2. [大規模言語モデルを観察しよう](src/3.Proposition.md#大規模言語モデルを観察しよう)
+      3. [LLMの内部に何が起こっているか](src/3.Proposition.md#llmの内部に何が起こっているか)
+      4. [多岐にわたるサンプリング手法](src/3.Proposition.md#多岐にわたるサンプリング手法)
+      5. [LLMの機能を拡張せよ](src/3.Proposition.md#llmの機能を拡張せよ)
 4. 電子透かしとは？
    1. 偏りのある単語帳
    2. みどりの単語をもっと使うように
