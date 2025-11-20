@@ -45,8 +45,7 @@
       5. [LLMの機能を拡張せよ](src/3.Proposition.md#llmの機能を拡張せよ)
 4. 電子透かしとは？
    1. 偏りのある単語帳
-   2. みどりの単語をもっと使うように
-   3. 検出機構
+   2. 検出機構
 5. 応用
    1. 透かしの放射性
    2. 動的ハッシュ
@@ -90,9 +89,8 @@ Project Link: [https://github.com/XHLin-gamer/Easy_LLM_Watermark](https://github
 | LLMの内部に何が起こっているか                 |    〇    |      |      |
 | 多岐にわたるサンプリング手法                  |    〇    |      |      |
 | LLMの機能を拡張せよ                           |    〇    |      |      |
-| 電子透かしとは？                              |        |      |      |
-| 偏りのある単語帳                              |        |      |      |
-| みどりの単語をもっと使うように                |        |      |      |
+| 電子透かしとは？                              |    〇    |      |      |
+| 偏りのある単語帳                              |    ▲    |      |      |
 | 検出機構                                      |        |      |      |
 | 応用                                          |        |      |      |
 | 透かしの放射性                                |        |      |      |
@@ -103,6 +101,9 @@ Project Link: [https://github.com/XHLin-gamer/Easy_LLM_Watermark](https://github
 | 著者情報                                      |        |      |      |
 | APPENDIX                                      |        |      |      |
 
+〇：完成
+
+▲：進行中
 <!-- ACKNOWLEDGMENTS
 ## Acknowledgments
 
