@@ -90,7 +90,7 @@ Project Link: [https://github.com/XHLin-gamer/Easy_LLM_Watermark](https://github
 | 多岐にわたるサンプリング手法                  |    〇    |      |      |
 | LLMの機能を拡張せよ                           |    〇    |      |      |
 | 電子透かしとは？                              |    〇    |      |      |
-| 偏りのある単語帳                              |    ▲    |      |      |
+| 偏りのある単語帳                              | Thx [@214Polaris](https://www.214polaris.top/)　   ▲    |      |      |
 | 検出機構                                      |        |      |      |
 | 応用                                          |        |      |      |
 | 透かしの放射性                                |        |      |      |
