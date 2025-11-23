@@ -43,17 +43,18 @@
       3. [LLMの内部に何が起こっているか](src/3.Proposition.md#llmの内部に何が起こっているか)
       4. [多岐にわたるサンプリング手法](src/3.Proposition.md#多岐にわたるサンプリング手法)
       5. [LLMの機能を拡張せよ](src/3.Proposition.md#llmの機能を拡張せよ)
-4. 電子透かしとは？
-   1. 偏りのある単語帳
-   2. 検出機構
-5. 応用
+4.[電子透かしとは？](src/4.LLM_Watermark.md)
+   1. [偏りのある単語帳](src/4.LLM_Watermark.md#偏りのある単語帳)
+   2. [モデルも迷う](src/4.LLM_Watermark.md#モデルも迷う)
+   3. [透かしの偏差値](src/4.LLM_Watermark.md#透かしの偏差値)
+1. 応用
    1. 透かしの放射性
    2. 動的ハッシュ
    3. 選択フィルター
-6. LLM透かしの欠点
-7. 結論
-8. 著者情報
-9.  APPENDIX
+2. LLM透かしの欠点
+3. 結論
+4. 著者情報
+5.  APPENDIX
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
