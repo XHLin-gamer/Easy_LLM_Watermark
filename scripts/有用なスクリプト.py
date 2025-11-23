@@ -1,3 +1,6 @@
+import matplotlib.pyplot as plt
+import japanize_matplotlib
+import numpy as np
 import math, os
 from tokenizers import Tokenizer, models, pre_tokenizers, decoders, trainers
 from loguru import logger
@@ -97,7 +100,7 @@ def train_tokenizer(
     return tokenizer
 
 
-def load_txt(path="./scripts/text/吾輩は猫であるutf8.txt") -> list[str]:
+def load_txt(path="./text/吾輩は猫であるutf8.txt") -> list[str]:
     with open(path, encoding="utf8") as f:
         lines = f.readlines()
 
@@ -142,3 +145,36 @@ def display_colored_box(words, colors, title="Output", filename = ""):
     if filename:
         console.save_svg(filename, title=title, theme=SVG_EXPORT_THEME)
         print(f"Successfully saved to {filename}")
+        
+
+def visualize_next_token_distribution(probabilities, tokenizer, top_k=10, prompt="",file_name = "next_token3.svg"):
+    # --- Matplotlib Configuration for Larger Font ---
+    # Set a larger default font size for all text elements in the plot
+    plt.rcParams.update({'font.size': 18}) 
+
+    # Convert to numpy array for easier sorting
+    probs_np = probabilities.cpu().numpy()
+    
+    # Get the indices (token IDs) of the top_k probabilities, sorted descendingly
+    top_k_indices = np.argsort(probs_np)[::-1][:top_k]
+    
+    # Get the actual tokens (strings) and their probability values
+    top_k_tokens = [tokenizer.decode(idx).strip() for idx in top_k_indices] # .strip() cleans up spaces
+    top_k_probs = probs_np[top_k_indices]
+
+    # --- Create the Visualization (Adjusted Size) ---
+    # Use a slightly larger height to accommodate the larger font without crowding
+    plt.figure(figsize=(12, 8)) 
+    
+    # Create a horizontal bar chart
+    plt.barh(top_k_tokens[::-1], top_k_probs[::-1], color='coral')
+    
+    # Set X-axis label with larger font
+    plt.xlabel('確率 (Probability)', fontsize=19) 
+    
+    # Set title with larger font
+    plt.title(f'「{prompt}」の次の単語の確率：', fontsize=19, pad=20) 
+    
+    plt.tight_layout()
+    plt.savefig(f"../pics/{file_name}")
+    plt.show() 
