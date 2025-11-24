@@ -43,9 +43,9 @@
       3. [LLMの内部に何が起こっているか](src/3.Proposition.md#llmの内部に何が起こっているか)
       4. [多岐にわたるサンプリング手法](src/3.Proposition.md#多岐にわたるサンプリング手法)
       5. [LLMの機能を拡張せよ](src/3.Proposition.md#llmの機能を拡張せよ)
-4.[電子透かしとは？](src/4.LLM_Watermark.md)
+4. [電子透かしとは？](src/4.LLM_Watermark.md)
    1. [偏りのある単語帳](src/4.LLM_Watermark.md#偏りのある単語帳)
-   2. [モデルも迷う](src/4.LLM_Watermark.md#モデルも迷う)
+   2. [モデルも迷う](src/4.LLM_Watermark.md#モデルも迷うときエントロピーの活用)
    3. [透かしの偏差値](src/4.LLM_Watermark.md#透かしの偏差値)
 1. 応用
    1. 透かしの放射性
@@ -91,9 +91,9 @@ Project Link: [https://github.com/XHLin-gamer/Easy_LLM_Watermark](https://github
 | 多岐にわたるサンプリング手法                  |    〇    |      |      |
 | LLMの機能を拡張せよ                           |    〇    |      |      |
 | 電子透かしとは？                              |    〇    |      |      |
-| 偏りのある単語帳                              |    〇    |▲      |   Thx [@214Polaris](https://www.214polaris.top/)　   |
-| 検出機構                                      |        |      |      |
-| 応用                                          |        |      |      |
+| 偏りのある単語帳                              |    〇    |      |   Thx [@214Polaris](https://www.214polaris.top/)　   |
+| 検出機構                                      |     〇   |      |      |
+| 応用                                          |    ▲    |      |      |
 | 透かしの放射性                                |        |      |      |
 | 動的ハッシュ                                  |        |      |      |
 | 選択フィルター                                |        |      |      |
