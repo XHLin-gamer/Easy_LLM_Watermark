@@ -47,14 +47,14 @@
    1. [偏りのある単語帳](src/4.LLM_Watermark.md#偏りのある単語帳)
    2. [モデルも迷う](src/4.LLM_Watermark.md#モデルも迷うときエントロピーの活用)
    3. [透かしの偏差値](src/4.LLM_Watermark.md#透かしの偏差値)
-1. 応用
-   1. 透かしの放射性
-   2. 動的ハッシュ
-   3. 選択フィルター
-2. LLM透かしの欠点
-3. 結論
-4. 著者情報
-5.  APPENDIX
+5. 応用
+   1. 動的ハッシュ
+   2. 選択フィルター
+   3. 透かしの放射性
+6. LLM透かしの欠点
+7. 結論
+8. 著者情報
+9.  APPENDIX
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
@@ -93,9 +93,9 @@ Project Link: [https://github.com/XHLin-gamer/Easy_LLM_Watermark](https://github
 | 電子透かしとは？                              |    〇    |      |      |
 | 偏りのある単語帳                              |    〇    |      |   Thx [@214Polaris](https://www.214polaris.top/)　   |
 | 検出機構                                      |     〇   |      |      |
-| 応用                                          |    ▲    |      |      |
+| 応用                                          |       |      |      |
+| 動的ハッシュ                                  |      ▲   |      |      |
 | 透かしの放射性                                |        |      |      |
-| 動的ハッシュ                                  |        |      |      |
 | 選択フィルター                                |        |      |      |
 | LLM透かしの欠点                               |        |      |      |
 | 結論                                          |        |      |      |
