@@ -80,7 +80,7 @@ Project Link: [https://github.com/XHLin-gamer/Easy_LLM_Watermark](https://github
 ## Progress
 | タイトル                                     | 下書き | 校正 | 備考 |
 |-----------------------------------------------|--------|------|------|
-|前書き  | 〇| 〇|　Thx [@TomoyasuOkada](https://github.com/TomoyasuOkada)　　|
+|前書き  | 〇| ▲|　Thx [@TomoyasuOkada](https://github.com/TomoyasuOkada)　　|
 | なぜLLMの文書を追跡する技術が必要とされるか？ |    〇    |       |      |
 | LLM は次の単語（トークン）を予測する技術です  |    〇     |       |      |
 | パソコンの単語：トークン                      |    〇     |      |      |
