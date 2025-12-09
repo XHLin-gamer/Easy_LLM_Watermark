@@ -94,9 +94,9 @@ Project Link: [https://github.com/XHLin-gamer/Easy_LLM_Watermark](https://github
 | 偏りのある単語帳                              |    〇    |      |   Thx [@214Polaris](https://www.214polaris.top/)　   |
 | 検出機構                                      |     〇   |      |      |
 | 応用                                          |       |      |      |
-| 動的ハッシュ                                  |      ▲   |      |      |
-| 透かしの放射性                                |        |      |      |
-| 選択フィルター                                |        |      |      |
+| 動的ハッシュ                                  |      〇   |      |      |
+| 透かしの放射性                                |     〇   |      |      |
+| 選択フィルター                                |    ▲    |      |      |
 | LLM透かしの欠点                               |        |      |      |
 | 結論                                          |        |      |      |
 | 著者情報                                      |        |      |      |
