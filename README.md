@@ -18,7 +18,6 @@
 <h3 align="center">誰でも理解できる、大規模言語モデルのための電子透かし</h3>
 
   <p align="center">
-    同人サークル「論文なんてはもう書きたくない」の公式レポです
     <!-- <br />
     <a href="https://github.com/XHLin-gamer/Easy_LLM_Watermark"><strong>Explore the docs »</strong></a>
     <br />
