@@ -46,10 +46,10 @@
    1. [偏りのある単語帳](src/4.LLM_Watermark.md#偏りのある単語帳)
    2. [モデルも迷う](src/4.LLM_Watermark.md#モデルも迷うときエントロピーの活用)
    3. [透かしの偏差値](src/4.LLM_Watermark.md#透かしの偏差値)
-5. 応用
-   1. 動的ハッシュ
-   2. 選択フィルター
-   3. 透かしの放射性
+5. [応用](src/5.Application.md)
+   1. [動的ハッシュ](src/5.Application.md#動的ハッシュ)
+   2. [透かしの放射性](src/5.Application.md#透かしの放射性)
+   3. 選択性フィルター
 6. 結論
 7. 著者情報
 8.  APPENDIX
