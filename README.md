@@ -50,10 +50,9 @@
    1. 動的ハッシュ
    2. 選択フィルター
    3. 透かしの放射性
-6. LLM透かしの欠点
-7. 結論
-8. 著者情報
-9.  APPENDIX
+6. 結論
+7. 著者情報
+8.  APPENDIX
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
