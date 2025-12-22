@@ -326,8 +326,8 @@ class dynamic_watermark(watermark_model):
                 
         if visualization:
             word_list.append("\n")
-            偏差値 = self.z_score(G=cnt, n=len(tokens_to_detect) - 1, p=self.wm_config.green_red_ratio)* 10 + 50
-            word_list.append(f"偏差値 -> {偏差値:.3f}")
+            偏差値 = self.z_score(G=cnt, n=len(tokens_to_detect) - 1, p=self.wm_config.green_red_ratio)
+            word_list.append(f"z-score -> {偏差値:.3f}")
             color_list.extend(["black", " blue"])
             print_box(
                 word_list, color_list, filename = visualization, title=title
@@ -347,7 +347,7 @@ if __name__ == "__main__":
 
     wm_config = Watermark_Config(
         watermark_type="v2",
-        gamma=3,
+        gamma=4,
         start_at=meaningful_start_at,
         end_at=meaningful_end_at,
         green_red_ratio=green_red_list_ratio,
@@ -360,19 +360,19 @@ if __name__ == "__main__":
                 "content": [
                     {
                         "type": "text",
-                        "text": '二百文字の物語を作りなさい。テーマはSF、主人公は大学院生。',
+                        "text": 'In short, what is large language model? ',
                     },
                 ],
             },
         ],
     ]
 
-    # response: list[str] = wm_model.generate(
-    #     messages=messages, do_watermark=True, max_new_tokens=1024
-    # )
-    # prompt, output = response[0].split("model", maxsplit=1)
-    # print(prompt)
-    # print(output)
+    response: list[str] = wm_model.generate(
+        messages=messages, do_watermark=True, max_new_tokens=256
+    )
+    prompt, output = response[0].split("model", maxsplit=1)
+    print(prompt)
+    print(output)
 
-    output = """「ネオ・アズール」大学の一室に閉じ込められたエリオットは、2000年後半に作られた都市から逃れた少年の経験に困っていた。彼が自分のシミュレーションプログラマーとして働くのを助けに来たはずだった研究者と出会ったとき、エリオットは自分自身が現実ではなく自分のプログラミングモデルだと気づいた。町には彼が最初に求めていた技術がまだ存在していないと仮定し、街には奇妙な「感情」を持っていた古い機械も存在し、彼に秘密がもたらされると信じているだけだった。町に到着すると、エリオットが考えないことが起こり始めたとき、彼らはアズールの存在がより深く意味を持つことになる可能性を示唆し始めた。"""    
-    print("偏差値 -> ", wm_model.detect_watermark(output, visualization="vis_wm.svg", title="二百文字の物語を作りなさい。テーマはSF、主人公は男子大学院生。"))
+    # output = """「ネオ・アズール」大学の一室に閉じ込められたエリオットは、2000年後半に作られた都市から逃れた少年の経験に困っていた。彼が自分のシミュレーションプログラマーとして働くのを助けに来たはずだった研究者と出会ったとき、エリオットは自分自身が現実ではなく自分のプログラミングモデルだと気づいた。町には彼が最初に求めていた技術がまだ存在していないと仮定し、街には奇妙な「感情」を持っていた古い機械も存在し、彼に秘密がもたらされると信じているだけだった。町に到着すると、エリオットが考えないことが起こり始めたとき、彼らはアズールの存在がより深く意味を持つことになる可能性を示唆し始めた。"""    
+    print("偏差値 -> ", wm_model.detect_watermark(output, visualization="vis_en.svg", title="In short, what is large language model?"))
