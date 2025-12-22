@@ -276,3 +276,88 @@ top-k というのは、低い確率の候補を切り捨て、より正しい�
 上の方の候補は良さそうですが、徐々に変なものが出てきましたね。例えば、「東京」という候補トークンが十一位にあって、「東京は日本の東京」という謎構文になります。すなわち、確率の低いトークン候補は不自然な言語に導くこともあります。そこで、確率の低いものを切り捨て、もう一回確率を整えるのです。こういう処理がされた後、
 ![](../pics/chap3/next_token6.png)
 こうなります。とりあえず低い確率が切り捨てられました、それと、Softmaxを使ったから、トップK個の中の確率が再編成されていました。こういう操作により、モデルが安全な範囲（TOP-K）の中で、もっと多様な選択をしてくれるはずです。
+
+
+
+## モデルも迷うとき（エントロピーの活用）
+皆さん、日本の首都はどこかご存知でしょうか？
+もちろん、東京ですね。
+では、「作者の好きな食べ物」を知っている人は、読者の中にいますか？
+もしそれを知っているのだとしたら、凄すぎます（エスパーですか？）。
+
+このように、自然言語の中には「定型文のようなほぼ確定している文章」と、「自由度が高く、不確定要素のある文章」が存在しています。例えば：
+
+ほぼ確定した構文             |  次に何が出るか分からない
+:-------------------------:|:-------------------------:
+![](../pics/chap4/entropy_10_low.png)  |  ![](../pics/chap4/entropy_10_high.png)
+
+「ほぼ確定している」箇所に調整を入れると、やはり文章の自然さを損なうため、避けるべきです。 逆に、「次に何が出るか分からない（迷っている）」状態なら、調整を入れようが入れまいが結果はもともと不確定なので、透かしを入れるならここが適切な場所です。この話は、前章で紹介した「話の分岐点」と同じです。
+
+この不確定さを測る指標として、**平均情報量**がよく使われています。各トークンの確率が得られた後、以下のように計算できます。
+
+$$H(P) = - \sum_{i} p_i \log_2 (p_i)$$
+
+具体的な数学的背景はここでは深掘りしません。興味のある方は付録を参照してください。
+
+それでは、平均情報量を計算する関数を実装しましょう：
+```python
+def calculate_entropy(probabilities: list) -> float:
+    
+    non_zero_mask = (probabilities > 0)
+    
+    # p_i * log2(p_i) の計算の中からゼロを排除します
+    log_p = torch.log2(probabilities[non_zero_mask])
+    entropy_terms = probabilities[non_zero_mask] * log_p
+    
+    # 平均情報量
+    entropy = -torch.sum(entropy_terms)
+
+    return entropy.item()
+```
+これはあくまで「不確定の度合いを測る関数」であると理解していただければ問題ありません。
+
+実際どれくらいの数値になるのか見てみましょう。
+
+平均情報量：4.379            |  平均情報量：6.149   
+:-------------------------:|:-------------------------:
+![](../pics/chap4/entropy_10_low.png)  |  ![](../pics/chap4/entropy_10_high.png)
+
+平均情報量が高い方が、より次のトークンが不確定であることを意味します。この平均情報量を係数として使うことで、もっとフレキシブルな制御が可能になります：
+```python
+from transformers import LogitsProcessor, LogitsProcessorList
+
+class BetterProcessor(LogitsProcessor):
+    def __init__(self, green_ids: list[int], boost_value: float = .1):
+        self.green_ids = green_ids
+        self.boost_value = boost_value
+
+    def __call__(self, input_ids: torch.LongTensor, scores: torch.FloatTensor) -> torch.FloatTensor:
+        prob = torch.softmax(scores, dim=1)
+
+        entropy = calculate_entropy(prob.flatten())
+
+        scores[:, self.green_ids] += self.boost_value * entropy
+        return scores
+    
+logits_processor_list = LogitsProcessorList([BetterProcessor(green_ids=green_ids, boost_value=5)])
+with torch.inference_mode():
+    outputs = model.generate(**inputs, max_new_tokens=128, temperature = 1.3, logits_processor=logits_processor_list)
+responses = tokenizer.batch_decode(outputs)
+print(responses[0])
+```
+そして、結果として
+![](../pics/chap4/entropy_vis.svg)
+
+自然な出力ですが、しっかりと緑のトークンの割合が増えており、なかなか満足できる結果です。ちなみに、この方法は言語に依存しないという利点があり、様々な言語でそのまま使えます：
+
+日本語：
+![](../pics/chap4/日本語.svg)
+
+英語：
+![](../pics/chap4/英語.svg)
+
+ドイツ語：
+![](../pics/chap4/ドイツ語.svg)
+
+中国語：
+![](../pics/chap4/中国語.svg)
