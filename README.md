@@ -35,10 +35,12 @@
 
 こんにちは、このレポはコミケ１０７に出す予定の作品「誰でも理解できる、大規模言語モデルのための電子透かし」の公式レポで、使われたコードや大体の内容はここに乗せます。大規模言語モデル（LLM）の基礎から、初心者でも理解できるように、電子透かしというLLMの出力の中に隠されたパターンを入れる仕組みを説明するつもりです。どうぞよろしくお願いします。
 
-<a href="https://github.com/XHLin-gamer/Easy_LLM_Watermark">
-         <img src="pics/cover.png" alt="cover" style="width:30%; max-width:100%; display:block; margin:auto;"  />
-    </a>
-
+<p align="center">
+  <img src="pics/samples/cover.jpg" width="25%" />
+  <img src="pics/samples/sample1.jpg" width="23.5%" />
+  <img src="pics/samples/sample2.jpg" width="23.5%" />
+  <img src="pics/samples/sample3.jpg" width="23.5%" />
+</p>
 
 ## あらすじ
 
