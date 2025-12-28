@@ -12,11 +12,10 @@
 <br />
 <div align="center">
     <a href="https://github.com/XHLin-gamer/Easy_LLM_Watermark">
-         <img src="pics/icon.png" alt="Logo" style="width:80%; max-width:100%; display:block; margin:auto;"  />
+         <img src="pics/icon.png" alt="Logo" style="width:30%; max-width:100%; display:block; margin:auto;"  />
     </a>
 
-<h3 align="center">誰でも理解できる、大規模言語モデルのための電子透かし</h3>
-
+<h3 align="center">誰でも理解できる、LLM透かし</h3>
   <p align="center">
     <!-- <br />
     <a href="https://github.com/XHLin-gamer/Easy_LLM_Watermark"><strong>Explore the docs »</strong></a>
@@ -29,6 +28,16 @@
     <a href="https://github.com/XHLin-gamer/Easy_LLM_Watermark/issues/new?labels=enhancement&template=feature-request---.md">Request Feature</a> -->
   </p>
 </div>
+
+## コミケ107＠二日目 南 h-36 b
+
+<!-- [![Product Name Screen Shot][product-screenshot]](https://example.com) -->
+
+こんにちは、このレポはコミケ１０７に出す予定の作品「誰でも理解できる、大規模言語モデルのための電子透かし」の公式レポで、使われたコードや大体の内容はここに乗せます。大規模言語モデル（LLM）の基礎から、初心者でも理解できるように、電子透かしというLLMの出力の中に隠されたパターンを入れる仕組みを説明するつもりです。どうぞよろしくお願いします。
+<a href="https://github.com/XHLin-gamer/Easy_LLM_Watermark">
+         <img src="pics/cover.png" alt="cover" style="width:30%; max-width:100%; display:block; margin:auto;"  />
+    </a>
+
 
 ## あらすじ
 
@@ -44,17 +53,9 @@
 5. [応用](src/5.Application.md)
    1. [動的ハッシュ](src/5.Application.md#動的ハッシュ)
    2. [透かしの放射性](src/5.Application.md#透かしの放射性)
-   3. 選択性フィルター
-6. 結論
-7. 著者情報
-8.  APPENDIX
+6.  [APPENDIX](src/Appendix.md)
 
 <!-- ABOUT THE PROJECT -->
-## About The Project
-
-<!-- [![Product Name Screen Shot][product-screenshot]](https://example.com) -->
-
-こんにちは、このレポはコミケ１０７に出す予定の作品「誰でも理解できる、大規模言語モデルのための電子透かし」の公式レポで、使われたコードや大体の内容はここに乗せます。大規模言語モデル（LLM）の基礎から、初心者でも理解できるように、電子透かしというLLMの出力の中に隠されたパターンを入れる仕組みを説明するつもりです。どうぞよろしくお願いします。
 
 <!-- <p align="right">(<a href="#readme-top">back to top</a>)</p> -->
 
