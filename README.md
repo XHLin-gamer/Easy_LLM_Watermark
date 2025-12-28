@@ -74,7 +74,10 @@
 
 Project Link: [https://github.com/XHLin-gamer/Easy_LLM_Watermark](https://github.com/XHLin-gamer/Easy_LLM_Watermark)
 
-## Progress
+
+<details>
+  <summary>進捗</summary>
+
 | タイトル                                      | 下書き | 校正 | 備考 |
 |-----------------------------------------------|--------|------|------|
 |前書き                                         | 〇        | 〇 |　Thx [@TomoyasuOkada](https://github.com/TomoyasuOkada)　　|
@@ -99,14 +102,19 @@ Project Link: [https://github.com/XHLin-gamer/Easy_LLM_Watermark](https://github
 〇：完成
 
 ▲：進行中
-<!-- ACKNOWLEDGMENTS
-## Acknowledgments
 
-* []()
-* []()
-* []()
+</details>
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p> -->
+
+ACKNOWLEDGMENTS
+## 謝辞
+
+* [Junwei Chen](https://www.214polaris.top/)
+* [Keito Tada](https://github.com/keito0tada)
+* [Tomoyasu Okada](https://github.com/TomoyasuOkada)
+* [Wenbo Huang](https://github.com/wenbohuang1002)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 
