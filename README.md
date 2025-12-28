@@ -106,7 +106,6 @@ Project Link: [https://github.com/XHLin-gamer/Easy_LLM_Watermark](https://github
 </details>
 
 
-ACKNOWLEDGMENTS
 ## 謝辞
 
 * [Junwei Chen](https://www.214polaris.top/)
