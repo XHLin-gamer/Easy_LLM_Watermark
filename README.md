@@ -15,7 +15,7 @@
          <img src="pics/icon.png" alt="Logo" style="width:30%; max-width:100%; display:block; margin:auto;"  />
     </a>
 
-<h3 align="center">誰でも·わかる、LLM透かし</h3>
+<h3 align="center">誰でもわかる、LLM透かし</h3>
   <p align="center">
     <!-- <br />
     <a href="https://github.com/XHLin-gamer/Easy_LLM_Watermark"><strong>Explore the docs »</strong></a>
